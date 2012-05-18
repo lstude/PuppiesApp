@@ -1,0 +1,25 @@
+<h1>Puppies For Sale</h1>
+
+<ul>
+<% @puppies.each do |puppy| %>
+<li>
+	<%= puppy.name %>
+	<%= puppy.breed %>
+	<%= puppy.age %>
+	</li>
+	<% end %>
+</ul>
+
+<%= form_tag "home" do %>
+	<%= label_tag "Puppy Name:" %>
+	<%= text_field_tag "name" %>
+	
+	<%= label_tag "Puppy Breed:" %>
+	<%= text_field_tag "breed" %>
+	
+	<%= label_tag "Puppy Age:" %>
+	<%= text_field_tag "age" %>
+	
+	<%= submit_tag "Sell yo doggie" %>
+	
+<% end %>
